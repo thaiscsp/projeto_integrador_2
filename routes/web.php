@@ -19,14 +19,38 @@ use App\Http\Controllers\AdminController;
     return view('welcome');
 });*/
 
+// home
 Route::get('/', function () {
     return view('index');
 });
+Route::post('/', [ClienteController::class, 'cadastrar_cliente']);
 
-Route::post('/', [ClienteController::class, 'store']);
-
-Route::get('/admin', function() {
-    return view('admin');
+// login
+Route::get('/login', function() {
+    return view('login');
 });
+Route::post('/login', [AdminController::class, 'login']);
 
-Route::post('/admin', [AdminController::class, 'send_mail']);
+// enviar e-mails
+Route::get('/enviar', function() {
+    return view('enviar_emails');
+});
+Route::post('/enviar', [AdminController::class, 'enviar_emails']);
+
+// deslogar
+Route::get('/logout', function() {
+    return view('logout');
+});
+Route::post('/logout', [AdminController::class, 'logout']);
+
+// cadastrar admin
+Route::get('/admin/cadastro', function() {
+    return view('admin_cadastro');
+});
+Route::post('/admin/cadastro', [AdminController::class, 'cadastrar_admin']);
+
+// remover admin
+Route::get('/admin/remocao', function() {
+    return view('admin_remocao');
+});
+Route::post('/admin/remocao', [AdminController::class, 'remover_admin']);

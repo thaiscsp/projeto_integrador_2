@@ -18,7 +18,7 @@ class Promocional extends Mailable
      */
     public function __construct()
     {
-        //
+        //$this->$nome = $nome;
     }
 
     /**
@@ -28,6 +28,6 @@ class Promocional extends Mailable
      */
     public function build()
     {
-        return $this->view('mail');
+       return $this->view('emails.email');
     }
 }

@@ -30,7 +30,7 @@ class AdminController extends Controller
     function cadastrar_admin(Request $request) {
         $admin = new Admin();
         $admin->email = $request->input('email');
-        $admin->senha = Hash::make($request->input('senha'));
+        $admin->senha = md5($request->input('senha'));
         $admin->save();
 
         Session::flash('mensagem', 'Admin cadastrado com sucesso.');
@@ -66,7 +66,7 @@ class AdminController extends Controller
         $admins = Admin::all();
 
         foreach ($admins as $admin) {
-            if (($admin->email==$email_input) and (Hash::check($senha_input, $admin->senha))) {
+            if (($admin->email==$email_input) and (md5($senha_input) == $admin->senha)) {
                 Session::put('usuario', $email_input);
             }
         }

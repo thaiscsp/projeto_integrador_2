@@ -2,12 +2,15 @@
 <html>
 
 <head>
-    <title>E-mail de teste</title>
+    <title></title>
 </head>
 
 <body>
     <h1>E-mail de teste</h1>
-    <p>E-mail de teste</p>
+    <p>Olá {{$nome}}!</p>
+    <footer>
+        <a href='http://localhost:8000/descadastrar/{{$email}}'>Descadastrar</a>
+    </footer>
 </body>
 
 </html> 

@@ -19,11 +19,17 @@ use App\Http\Controllers\AdminController;
     return view('welcome');
 });*/
 
-// home
+// home + cadastrar cliente
 Route::get('/', function () {
     return view('index');
 });
 Route::post('/', [ClienteController::class, 'cadastrar_cliente']);
+
+// remover cliente
+Route::get('/descadastrar/{email}', function($email) {
+    return view('descadastro', ['email'=>$email]);
+});
+Route::post('/descadastrar/{email}', [ClienteController::class, 'descadastrar_cliente']);
 
 // login
 Route::get('/login', function() {

@@ -35,5 +35,4 @@
 		<br>
 	</form>
 
-</div>
 @stop

@@ -6,8 +6,7 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 use App\Models\Admin;
-use Session;
-use DB;
+use Session, DB, Str;
 
 class AdminControllerTest extends TestCase
 {
@@ -20,11 +19,12 @@ class AdminControllerTest extends TestCase
 
     public function test_enviar_emails() {
         // cria e loga com admin teste
+        $senha = Str::random(10);
         $admin_teste = new Admin();
-        $admin_teste->email = 'adminteste@mail.com';
-        $admin_teste->senha = md5('adminteste');
+        $admin_teste->email = Str::random(10) . '@' . Str::random(6) . '.' . Str::random(3);
+        $admin_teste->senha = md5($senha);
         $admin_teste->save();
-        $this->post('/login', ['email'=>$admin_teste->email, 'senha'=>'adminteste']);
+        $this->post('/login', ['email'=>$admin_teste->email, 'senha'=>$senha]);
 
         // se logado...
         if (Session::get('usuario')) {
@@ -36,23 +36,26 @@ class AdminControllerTest extends TestCase
 
     public function test_cadastrar_e_remover_admin() {
         // loga com admin teste
+        $senha = Str::random(10);
         $admin_teste = new Admin();
-        $admin_teste->email = 'adminteste@mail.com';
-        $admin_teste->senha = md5('adminteste');
+        $admin_teste->email = Str::random(10) . '@' . Str::random(6) . '.' . Str::random(3);
+        $admin_teste->senha = md5($senha);
         $admin_teste->save();
-        $this->post('/login', ['email'=>$admin_teste->email, 'senha'=>'adminteste']);
+        $this->post('/login', ['email'=>$admin_teste->email, 'senha'=>$senha]);
 
         // se logado...
         if (Session::get('usuario')) {
             // cadastrar novo admin
-            $this->post('/admin/cadastro', ['email'=>'adminnovo@mail.com', 'senha'=>'adminnovo']);
+            $novo_email = Str::random(10) . '@' . Str::random(6) . '.' . Str::random(3);
+            $nova_senha = Str::random(10);
+            $this->post('/admin/cadastro', ['email'=>$novo_email, 'senha'=>$nova_senha]);
 
             // verifica se novo admin está no banco de dados
             $admins = Admin::all();
             foreach($admins as $admin) {
-                if($admin->email == 'adminnovo@mail.com') {
-                    $this->assertSame('adminnovo@mail.com', $admin->email);
-                    $this->assertSame(md5('adminnovo'), $admin->senha);
+                if($admin->email == $novo_email) {
+                    $this->assertSame($novo_email, $admin->email);
+                    $this->assertSame(md5($nova_senha), $admin->senha);
                     $this->assertSame('Admin cadastrado com sucesso.', Session::get('mensagem'));
                 }
             }
@@ -70,13 +73,13 @@ class AdminControllerTest extends TestCase
             }
 
             // remove admin cadastrado
-            $this->post('/admin/remocao', ['email'=>'adminnovo@mail.com']);
+            $this->post('/admin/remocao', ['email'=>$novo_email]);
             $this->assertSame('Admin removido com sucesso.', Session::get('mensagem'));
 
             // verifica se admin foi removido de fato
             $this->assertNull(
                     Admin::select('email', 'senha')
-                    ->where('email', '=', 'adminnovo@mail.com')
+                    ->where('email', '=', $novo_email)
                     ->first()
             );
         }
@@ -84,11 +87,12 @@ class AdminControllerTest extends TestCase
 
     public function test_login_e_logout() {
         // cria e loga com admin teste
+        $senha = Str::random(10);
         $admin_teste = new Admin();
-        $admin_teste->email = 'adminteste@mail.com';
-        $admin_teste->senha = md5('adminteste');
+        $admin_teste->email = Str::random(10) . '@' . Str::random(6) . '.' . Str::random(3);
+        $admin_teste->senha = md5($senha);
         $admin_teste->save();
-        $this->post('/login', ['email'=>$admin_teste->email, 'senha'=>'adminteste']);
+        $this->post('/login', ['email'=>$admin_teste->email, 'senha'=>$senha]);
 
         // certifica que 'adminteste@mail.com' está logado
         $this->assertSame($admin_teste->email, Session::get('usuario'));

@@ -50,13 +50,13 @@
 		<div class='col-4'></div>
 		<div class='col-4'>
 			<?php
-			if ($usuario = Session::get('usuario')) {
-			echo("
-					<div id='mensagem'>
+				if ($usuario = Session::get('usuario')) {
+					echo("
+						<div id='mensagem'>
 						<p>Usuário logado: <strong>" . $usuario . "</strong></p>
-					</div>
-				");
-		}?>
+						</div>
+					");
+			}?>
 		</div>
 	</div>
 	
@@ -64,6 +64,52 @@
 
 	@yield('content')
 	<br>
+
+	<?php
+		$curl = curl_init();
+		curl_setopt_array($curl, [
+			CURLOPT_URL => "https://instagram130.p.rapidapi.com/account-info?username=cervejariadela",
+			CURLOPT_RETURNTRANSFER => true,
+			CURLOPT_FOLLOWLOCATION => true,
+			CURLOPT_ENCODING => "",
+			CURLOPT_MAXREDIRS => 10,
+			CURLOPT_TIMEOUT => 30,
+			CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+			CURLOPT_CUSTOMREQUEST => "GET",
+			CURLOPT_HTTPHEADER => [
+				"X-RapidAPI-Host: instagram130.p.rapidapi.com",
+				"X-RapidAPI-Key: 066c77207emsh826ed77c2e7db07p11bb2fjsn02e0577384bf"
+			],
+		]);
+
+		$response = curl_exec($curl);
+		$err = curl_error($curl);
+
+		curl_close($curl);
+
+		if ($err) {
+			echo "cURL Error #:" . $err;
+		} else {
+			$response = json_decode($response);
+		}
+	?>
+
+	<div class="footer text-white bg-dark">
+		<div class="row">
+			<div class="col-2">
+				<img src="{{asset('storage/cervejariadela.jpg')}}">
+			</div>
+			<div class="col-10">
+				<p style="padding-top: 26px;">
+					Siga a <a href="https://www.instagram.com/cervejariadela/?hl=pt">Cervejaria Dela</a> no Instagram! | {{$response->edge_followed_by->count}} seguidores
+				</p>
+				<p>
+					{{$response->biography}}
+				</p>
+			</div>
+		</div>
+	</div>
+
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 </body>
 

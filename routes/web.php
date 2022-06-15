@@ -60,3 +60,8 @@ Route::get('/admin/remocao', function() {
     return view('admin_remocao');
 });
 Route::post('/admin/remocao', [AdminController::class, 'remover_admin']);
+
+// teste
+Route::get('/teste', function() {
+    return view('teste.cervejaria');
+});

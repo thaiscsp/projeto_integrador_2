@@ -6,7 +6,7 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 use App\Models\Cliente;
-use Session;
+use Session, Str;
 
 class ClienteControllerTest extends TestCase
 {
@@ -20,8 +20,8 @@ class ClienteControllerTest extends TestCase
 
     public function test_cadastrar_e_descadastrar_cliente() {
         // dados falsos para cliente teste
-        $nome = 'nometeste';
-        $email = 'nometeste@mail.com';
+        $nome = Str::random(10);
+        $email = Str::random(10) . '@' . Str::random(6) . '.' . Str::random(3);
 
         // cadastra cliente teste
         $this->post('/', ['nome'=>$nome, 'email'=>$email]);
@@ -45,7 +45,8 @@ class ClienteControllerTest extends TestCase
             );
 
         // tenta descadastrar cliente inexistente
-        $this->post('/descadastrar/' . 'teste@mail.com');
+        $email_inexistente = Str::random(10) . '@' . Str::random(6) . '.' . Str::random(3);
+        $this->post('/descadastrar/' . $email_inexistente);
         $this->assertSame('Não existe cadastro para esse usuário.', Session::get('mensagem'));
     }
 }

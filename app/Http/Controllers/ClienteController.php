@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Cliente;
+use App\Models\Admin;
 use Session;
 
 class ClienteController extends Controller
@@ -44,5 +45,36 @@ class ClienteController extends Controller
             return redirect('/');
         }
         
+    }
+
+    function retornar_clientes($usuario, $nome='') {
+        header("Content-type: application/json");
+        if ((Admin::where('email', $id)->first()) and ($nome != '')) {
+            $clientes = Cliente::all();
+            foreach ($clientes as $cliente) {
+                if ($cliente->nome == $nome) {
+                    $dados_cliente = new stdClass();
+                    $dados_cliente->nome = $cliente->nome;
+                    $dados_cliente->email = $cliente->email;
+                    $dados_cliente = json_encode($objCliente);
+                    echo $dados_cliente;
+                }
+            }
+        } elseif ((Admin::where('email', $id)->first()) and ($nome == '')) {
+            $clientes = Cliente::all();
+            $mensagem = '{"clientes": [';
+            foreach ($clientes as $cliente) {
+                $dados_cliente = new stdClass();
+                $dados_cliente->nome = $cliente->nome;
+                $dados_cliente->email = $cliente->email;
+                $dados_cliente = json_decode(json_encode($objCliente));
+                $mensagem = $mensagem . $dados_cliente . ', ';
+            }
+            $mensagem = rtrim($mensagem, ', ');
+            $mensagem = $mensagem . ']}';
+            echo json_encode($mensagem);
+        } else {
+            return '{"mensagem": "Acesso negado."}';
+        }
     }
 }

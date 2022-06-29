@@ -16,7 +16,6 @@ return new class extends Migration
         Schema::create('clientes', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('nome', 50)->nullable(false);
             $table->string('email', 50)->nullable(false)->unique();
         });
     }

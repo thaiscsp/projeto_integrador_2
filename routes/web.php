@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,15 +16,11 @@ use App\Http\Controllers\AdminController;
 |
 */
 
-/*Route::get('/', function () {
-    return view('welcome');
-});*/
-
-// home + cadastrar cliente
+// index
 Route::get('/', function () {
     return view('index');
 });
-Route::post('/', [ClienteController::class, 'cadastrar_cliente']);
+Route::post('/', [HomeController::class, 'home']);
 
 // remover cliente
 Route::get('/descadastrar/{email}', function($email) {
@@ -49,19 +46,8 @@ Route::get('/logout', function() {
 });
 Route::post('/logout', [AdminController::class, 'logout']);
 
-// cadastrar admin
-Route::get('/admin/cadastro', function() {
-    return view('admin_cadastro');
+// gerenciar admins
+Route::get('/gerenciar-admins', function() {
+    return view('gerenciar_admins');
 });
-Route::post('/admin/cadastro', [AdminController::class, 'cadastrar_admin']);
-
-// remover admin
-Route::get('/admin/remocao', function() {
-    return view('admin_remocao');
-});
-Route::post('/admin/remocao', [AdminController::class, 'remover_admin']);
-
-// teste
-Route::get('/teste', function() {
-    return view('teste.cervejaria');
-});
+Route::post('/gerenciar-admins', [AdminController::class, 'gerenciar_admins']);

@@ -9,15 +9,16 @@
 ?>
 
 <div class='text-center'>
-	<h2 style='font-weight:  bold; color: #ff4d4d;'>Logout</h2>
+	<p class="display-5">LOGOUT</p>
 	<div class='form-group'>
-		<br><p>Tem certeza de que deseja fazer logout?</p>
+		<br><p class="lead">Tem certeza de que deseja fazer logout?</p><br>
 		<form id='logout' action='' method='POST'>
 			@csrf
-			<input type='submit' value='Fazer logout'>
+			<input class='btn btn-danger' type='submit' value='Fazer logout'>
 			<br>
 		</form>
 	</div>
+	<br>
 
 	<?php
 		if ($mensagem = Session::get('mensagem')) {

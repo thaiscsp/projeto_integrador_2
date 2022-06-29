@@ -20,16 +20,15 @@ class ClienteControllerTest extends TestCase
 
     public function test_cadastrar_e_descadastrar_cliente() {
         // dados falsos para cliente teste
-        $nome = Str::random(10);
         $email = Str::random(10) . '@' . Str::random(6) . '.' . Str::random(3);
 
         // cadastra cliente teste
-        $this->post('/', ['nome'=>$nome, 'email'=>$email]);
+        $this->post('/', ['email-cadastro'=>$email]);
 
         // verifica que cliente teste está no banco de dados
         $clientes = Cliente::all();
         foreach($clientes as $cliente) {
-            if($this->assertSame($nome, $cliente->nome) and $this->assertSame($email, $cliente->email)) {
+            if($this->assertSame($email, $cliente->email)) {
                 $this->assertSame('Usuário cadastrado com sucesso!', Session::get('mensagem'));
             }
         }
@@ -39,7 +38,7 @@ class ClienteControllerTest extends TestCase
 
         // verifica que cliente teste foi removido do banco
         $this->assertNull(
-                    Cliente::select('nome', 'email')
+                    Cliente::select('email')
                     ->where('email', '=', $email)
                     ->first()
             );

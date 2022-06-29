@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Joan&display=swap');
+
+body{
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, p, a{
+    font-family: 'Joan', serif;
+}
+
+.box-shadow{
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5),
+                0 4px 8px 0 rgba(0,0,0,0.5);
+}
+
+.border-bottom-white{
+    border-bottom: 1px solid white;
+    margin-bottom: 5px;
+}
+/* Navbar */
+.navbar{
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+/*Nossas cervejas*/
+@media screen and (max-width: 567px){
+    .order-text{
+        order: 1;
+    }
+    .order-img{
+        order: 2;
+    }
+}
+/*//Nossas cervejas*/
+
+/* Conheça nossa cervejaria */
+
+@media screen and (max-width: 567px){
+    .container{
+        text-align: center;
+    }
+    iframe{
+        width: auto;
+        height: auto;
+    }
+    .img-fluid{
+        width: 80%;
+    }
+}
+
+/* //Conheça nossa cervejaria */
+
+/*Galeria*/
+@media screen and (min-width: 568px) {
+    .cards-wrapper {
+        display: flex;
+    }
+
+    .card {
+        margin: 0 0.5em;
+        width: calc(100%/3);
+        border: none;
+        box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+    }
+}
+
+@media screen and (max-width: 567px) {
+    .card:not(:first-child) {
+        display: none;
+    }
+
+    .card {
+        border: none;
+        box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+    }
+}
+
+/*//Galeria*/
+
+/*Newsletter*/
+.newsletter {
+    padding: 80px 0px;
+    background-color: #19beda;
+}
+
+.newsletter .content {
+    max-width: 650px;
+    margin: 0 auto;
+    text-align: center
+}
+
+.newsletter .content h2 {
+    margin-bottom: 40px;
+    color: #243c4f;
+}
+
+.newsletter .content .form-control {
+    height: 50px;
+    border-color: #fff;
+    border-radius: 0;
+}
+
+.newsletter .content .form-control:focus {
+    box-shadow: none;
+    border: 2px solid #243c4f;
+}
+
+.newsletter .content .btn {
+    min-height: 50px;
+    border-radius: 0;
+    background-color: #243c4f;
+    color: #fff;
+    font-weight: 600;
+}
+
+/*//Newsletter*/

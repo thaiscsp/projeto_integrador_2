@@ -12,13 +12,13 @@
 		if ($mensagem = Session::get('mensagem')) {
 			$mensagem = Session::get('mensagem') . '<br>';
 		} else {
-			$mensagem = '<br>Deseja enviar e-mails para todos os clientes?<br>';
+			$mensagem = '<br><p class="lead">Deseja enviar e-mails para todos os clientes?</p><br>';
 		}
 
 	?>
 
 <div class='text-center'>
-	<h2 style='font-weight:  bold; color: #51bac8;'>Enviar e-mails</h2>
+	<p class="display-5">ENVIAR E-MAILS</p>
 	
 
 	<div class='form-group'>
@@ -26,7 +26,7 @@
 		<form id='enviar' action='' method='POST'>
 			@csrf
 			<input type='submit' value='Enviar'>
-			<br>
+			<br><br>
 		</form>
 	</div>
 

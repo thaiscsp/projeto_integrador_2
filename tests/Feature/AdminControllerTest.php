@@ -18,13 +18,13 @@ class AdminControllerTest extends TestCase
     use RefreshDatabase;
 
     public function test_enviar_emails() {
-        // cria e loga com admin teste
+        // cria admin teste logado
         $senha = Str::random(10);
         $admin_teste = new Admin();
         $admin_teste->email = Str::random(10) . '@' . Str::random(6) . '.' . Str::random(3);
         $admin_teste->senha = md5($senha);
         $admin_teste->save();
-        $this->post('/login', ['email'=>$admin_teste->email, 'senha'=>$senha]);
+        Session::put('usuario', $admin_teste->email);
 
         // se logado...
         if (Session::get('usuario')) {
@@ -35,20 +35,20 @@ class AdminControllerTest extends TestCase
     }
 
     public function test_cadastrar_e_remover_admin() {
-        // loga com admin teste
+        // cria admin teste logado
         $senha = Str::random(10);
         $admin_teste = new Admin();
         $admin_teste->email = Str::random(10) . '@' . Str::random(6) . '.' . Str::random(3);
         $admin_teste->senha = md5($senha);
         $admin_teste->save();
-        $this->post('/login', ['email'=>$admin_teste->email, 'senha'=>$senha]);
+        Session::put('usuario', $admin_teste->email);
 
         // se logado...
         if (Session::get('usuario')) {
             // cadastrar novo admin
             $novo_email = Str::random(10) . '@' . Str::random(6) . '.' . Str::random(3);
             $nova_senha = Str::random(10);
-            $this->post('/admin/cadastro', ['email'=>$novo_email, 'senha'=>$nova_senha]);
+            $this->post('/gerenciar-admins', ['email-cadastro'=>$novo_email, 'senha-cadastro'=>$nova_senha]);
 
             // verifica se novo admin está no banco de dados
             $admins = Admin::all();
@@ -61,7 +61,7 @@ class AdminControllerTest extends TestCase
             }
 
             // tenta remover admin logado
-            $this->post('/admin/remocao', ['email'=>$admin_teste->email]);
+            $this->post('/gerenciar-admins', ['email-remocao'=>$admin_teste->email]);
             $this->assertSame('Você não pode remover o admin que está usando no momento.', Session::get('mensagem'));
 
             // verifica se admin logado permanece no banco
@@ -73,7 +73,7 @@ class AdminControllerTest extends TestCase
             }
 
             // remove admin cadastrado
-            $this->post('/admin/remocao', ['email'=>$novo_email]);
+            $this->post('/gerenciar-admins', ['email-remocao'=>$novo_email]);
             $this->assertSame('Admin removido com sucesso.', Session::get('mensagem'));
 
             // verifica se admin foi removido de fato
@@ -92,7 +92,7 @@ class AdminControllerTest extends TestCase
         $admin_teste->email = Str::random(10) . '@' . Str::random(6) . '.' . Str::random(3);
         $admin_teste->senha = md5($senha);
         $admin_teste->save();
-        $this->post('/login', ['email'=>$admin_teste->email, 'senha'=>$senha]);
+        $this->post('/', ['email-login'=>$admin_teste->email, 'senha-login'=>$senha]);
 
         // certifica que 'adminteste@mail.com' está logado
         $this->assertSame($admin_teste->email, Session::get('usuario'));

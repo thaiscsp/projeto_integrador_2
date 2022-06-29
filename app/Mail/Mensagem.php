@@ -6,9 +6,8 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
-use App\Model\Cliente;
 
-class Promocional extends Mailable
+class Mensagem extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -17,9 +16,11 @@ class Promocional extends Mailable
      *
      * @return void
      */
-    public function __construct($email)
+    public function __construct($email, $nome, $mensagem)
     {
         $this->email = $email;
+        $this->nome = $nome;
+        $this->mensagem = $mensagem;
     }
 
     /**
@@ -29,6 +30,6 @@ class Promocional extends Mailable
      */
     public function build()
     {
-       return $this->view('emails.email', ['email'=>$this->email]);
+        return $this->subject('Nova mensagem de ' . $this->email)->view('emails.mensagem', ['email'=>$this->email, 'nome'=>$this->nome, 'mensagem'=>$this->mensagem]);
     }
 }

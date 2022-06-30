@@ -309,7 +309,7 @@ if ($err) {
 						<div class="content">
 							<h2>Inscreva-se para receber as novidades!</h2>
 							<form action="" method="POST">
-							<meta name="csrf-token" content="{{ csrf_token() }}">
+							@csrf
                             <input type="hidden" name="home" value="cadastrar-cliente">
 							<div class="input-group">
 								<input

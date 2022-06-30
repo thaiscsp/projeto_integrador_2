@@ -24,9 +24,9 @@ class HomeControllerTest extends TestCase
 
     public function test_enviar_mensagem() {
         $email = Str::random(10) . '@' . Str::random(6) . '.' . Str::random(3);
-        $nome = Str::random(10);
+        $nome = Str::random(5);
         $mensagem = Str::random(50);
-        $response = $this->post('/', ['email-mensagem'=>$email, 'nome-mensagem'=>$nome, 'mensagem'=>$mensagem]);
-        $response->assertStatus(201);
+        $this->post('/', ['home'=>'enviar-mensagem', 'email-mensagem'=>$email, 'nome-mensagem'=>$nome, 'mensagem'=>$mensagem]);
+        $this->assertStringContainsString('Mensagem enviada com sucesso!', Session::get('mensagem'));
     }
 }

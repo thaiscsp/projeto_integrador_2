@@ -11,19 +11,17 @@ use Session, Mail;
 class HomeController extends Controller
 {
     function home(Request $request) {
-        // Login
+        // teste - ok
         if ($request->input('home') == 'acessar-painel-administrativo') {
-                $email_input = $request->input('email-login');
-                $senha_input = $request->input('senha-login');
-
-                $admins = Admin::all();
-
-                foreach ($admins as $admin) {
-                    if (($admin->email==$email_input) and (md5($senha_input) == $admin->senha)) {
-                            Session::put('usuario', $email_input);
-                            Session::flash('mensagem', 'Admin logado com sucesso.');
-                    }
+            $email_input = $request->input('email-login');
+            $senha_input = $request->input('senha-login');
+            $admins = Admin::all();
+            foreach ($admins as $admin) {
+                if (($admin->email==$email_input) and (md5($senha_input) == $admin->senha)) {
+                        Session::put('usuario', $email_input);
+                        Session::flash('mensagem', 'Admin logado com sucesso.');
                 }
+            }
         }
         // teste - ok
         elseif ($request->input('home') == 'cadastrar-cliente') {
@@ -32,6 +30,7 @@ class HomeController extends Controller
             $cliente->save();
             $request->session()->flash('mensagem', '<br>Usuário cadastrado com sucesso!');
         }
+        // teste - ok
         elseif ($request->input('home') == 'enviar-mensagem') {
             $email = $request->input('email-mensagem');
             $nome = $request->input('nome-mensagem');

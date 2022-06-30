@@ -16,16 +16,15 @@ class AdminController extends Controller
     // teste - ok
     function enviar_emails(Request $request) {
         $clientes = Cliente::all();
-
         foreach ($clientes as $cliente) {
             Mail::to($cliente->email)->send(new Promocional($cliente->email));
         }
-
         $request->session()->flash('mensagem', '<br>E-mails enviados com sucesso.<br>');
         return redirect('/enviar');
     }
 
     function gerenciar_admins(Request $request) {
+        // teste - ok
         if ($request->input('gerenciar-admins') == 'cadastrar-admin') {
             $admin = new Admin();
             $admin->email = $request->input('email-cadastro');
@@ -33,7 +32,9 @@ class AdminController extends Controller
             $admin->save();
 
             Session::flash('mensagem', 'Admin cadastrado com sucesso.');
-        } elseif ($request->input('gerenciar-admins') == 'remover-admin') {
+        }
+        // teste - ok
+        elseif ($request->input('gerenciar-admins') == 'remover-admin') {
             $email_input = $request->input('email-remocao');
             $usuario = Session::get('usuario');
 
@@ -54,12 +55,8 @@ class AdminController extends Controller
         }
         return redirect('/gerenciar-admins');
     }
-
-    function remover_admin(Request $request) {
-        
-        return redirect('/admin/remocao');
-    }
-
+    
+    // teste - ok
     function logout(Request $request) {
         Session::forget('usuario');
 

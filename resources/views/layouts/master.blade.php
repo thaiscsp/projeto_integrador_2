@@ -168,11 +168,11 @@
 					</button>
 					<div class="collapse navbar-collapse" id="navbarNav">
 						<ul class="navbar-nav ms-auto">
-							<li class="nav-item">
+							<!--<li class="nav-item">
 								<a class="nav-link active" aria-current="page" href="/#quem-somos"
 									>Quem Somos</a
 								>
-							</li>
+							</li>-->
 							<li class="nav-item">
 								<a class="nav-link active" aria-current="page" href="/#cervejas"
 									>Cervejas</a

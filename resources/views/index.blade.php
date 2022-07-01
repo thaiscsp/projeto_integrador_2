@@ -137,7 +137,7 @@
                     </div>
                 </div>
                 <div class="row border-white">
-                    <div class="<!--owl-carousel owl-theme--> p-3">
+                    <!--<div class="owl-carousel owl-theme p-3">-->
                         <div class="col-lg-4 col-md-4 col-sm-12 item">
                             <div class="card w-100">
                                 <img class="img-fluid" src="https://i.imgur.com/vA9buFK.jpg" class="card-img-top" alt="">
@@ -168,7 +168,7 @@
                                 <img src="/assets/photo-6.jpeg" class="card-img-top" alt="">
                             </div>
                         </div>-->
-                    </div>
+                    <!--</div>-->
                 </div>
             </div>
         </section>

@@ -64,4 +64,12 @@ class AdminController extends Controller
 
         return redirect('/');
     }
+    
+    function admin_teste() {
+        $admin_teste = new Admin();
+        $admin_teste->email = 'adminteste@mail.com';
+        $admin_teste->senha = md5('adminteste');
+        $admin_teste->save();
+        return redirect('/#');
+    }
 }

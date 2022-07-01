@@ -124,17 +124,17 @@
                 </div>
                 <div class="row p-3 border-white">
                     <!--<div class="owl-carousel owl-theme p-3">-->
-                        <div class="col-lg-4 col-md-4 col-xs-12 item">
+                        <div class="col-lg-4 col-md-4 col-sm-12 item">
                             <div class="card w-100">
                                 <img class="img-fluid" src="https://i.imgur.com/vA9buFK.jpg" class="card-img-top" alt="">
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-4 col-xs-12 item">
+                        <div class="col-lg-4 col-md-4 col-sm-12 item">
                             <div class="card w-100">
                                 <img src="https://i.imgur.com/hh9WROI.jpg" class="card-img-top" alt="">
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-4 col-xs-12 item">
+                        <div class="col-lg-4 col-md-4 col-sm-12 item">
                             <div class="card w-100">
                                 <img src="https://i.imgur.com/fTFHzey.jpg" class="card-img-top" alt="">
                             </div>
@@ -236,7 +236,7 @@ curl_setopt_array($curl, [
     CURLOPT_CUSTOMREQUEST => "GET",
     CURLOPT_HTTPHEADER => [
         "X-RapidAPI-Host: instagram47.p.rapidapi.com",
-        "X-RapidAPI-Key: a97f999fbdmsh648b14e58c27092p109aaajsnb7a0838be505"
+        "X-RapidAPI-Key: cb767b4dd0mshfb731d6d399c455p17cccejsn36462da1c1d9"
     ],
 ]);
 $response = curl_exec($curl);
@@ -263,7 +263,7 @@ if ($err) {
                                     <a
                                         href="https://www.instagram.com/cervejariadela/?hl=en"
                                         class="btn btn-sm btn-outline-secondary d-block mb-2"
-                                        >Instagram | {{$response->body->count}} seguidores </a
+                                        >Instagram | <!--{ {$response->body->count} }--> seguidores </a
                                     >
                                 </li>
                                 <li>
@@ -356,7 +356,6 @@ if ($err) {
                     }
                 }
             })
-
 		</script>
 
 

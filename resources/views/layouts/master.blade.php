@@ -153,7 +153,7 @@
 			<nav class="navbar navbar-expand-lg bg-light navbar-light">
 				<div class="container container-fluid navbar-brand">
 					<a href="#">
-                        <img class="thumbnail" style="height: 40px" src="/assets/logo.png" alt="">
+                        <img class="thumbnail" style="height: 40px" src="https://i.imgur.com/uvaHFiD.png" alt="">
                     </a>
 					<button
 						class="navbar-toggler"

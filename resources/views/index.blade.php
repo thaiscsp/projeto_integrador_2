@@ -253,7 +253,7 @@ curl_setopt_array($curl, [
     CURLOPT_CUSTOMREQUEST => "GET",
     CURLOPT_HTTPHEADER => [
         "X-RapidAPI-Host: instagram47.p.rapidapi.com",
-        "X-RapidAPI-Key: 066c77207emsh826ed77c2e7db07p11bb2fjsn02e0577384bf"
+        "X-RapidAPI-Key: cb767b4dd0mshfb731d6d399c455p17cccejsn36462da1c1d9"
     ],
 ]);
 
@@ -284,7 +284,7 @@ if ($err) {
                                     <a
                                         href="https://www.instagram.com/cervejariadela/?hl=en"
                                         class="btn btn-sm btn-outline-secondary d-block mb-2"
-                                        >Instagram | <!--{ {$response->body->count} }--> seguidores </a
+                                        >Instagram | {{$response->body->count}} seguidores </a
                                     >
                                 </li>
                                 <li>

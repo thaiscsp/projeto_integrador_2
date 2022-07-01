@@ -93,7 +93,7 @@
                             </p>
                         </div>
                         <div class="col-md-4">
-                            <img class="img-fluid rounded" src="{{asset('storage/photo-6.jpeg')}}" alt="" />
+                            <img class="img-fluid rounded" src="https://i.imgur.com/fTFHzey.jpg" alt="" />
                         </div>
                     </div>
                 </div>

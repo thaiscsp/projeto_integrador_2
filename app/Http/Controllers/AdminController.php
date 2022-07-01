@@ -34,7 +34,7 @@ class AdminController extends Controller
             Session::flash('mensagem', 'Admin cadastrado com sucesso.');
         }
         // teste - ok
-        elseif ($request->input('gerenciar-admins') == 'remover-admin') {
+        elseif ($request->input('Remover') == 'Remover') {
             $email_input = $request->input('email-remocao');
             $usuario = Session::get('usuario');
 

@@ -45,7 +45,7 @@ class AdminController extends Controller
                 $admins = Admin::all();
                 foreach ($admins as $admin) {
                     if (($admin->email==$email_input)) {
-                        $admin_old = Admin::select('id')->where('email', '=', $admin->email)->first();
+                        $admin_old = Admin::find($admin->id);
                         $admin_old->delete();
                         Session::flash('mensagem', 'Admin removido com sucesso.');
                 

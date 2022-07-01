@@ -123,7 +123,7 @@
                 </div>
             </div>
         </section>
-
+        <!---->
         <!-- Galeria -->
         <section class="bg-dark" id="galeria">
             <div class="container">

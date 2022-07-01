@@ -136,7 +136,7 @@
                         </h1>
                     </div>
                 </div>
-                <div class="row border-white">
+                <div class="row border-white"><br>
                     <!--<div class="owl-carousel owl-theme p-3">-->
                         <div class="col-lg-4 col-md-4 col-sm-12 item">
                             <div class="card w-100">
@@ -174,7 +174,7 @@
         </section>
 
 		<!-- Fale conosco -->
-        <section class="bg-light" id="fale-conosco">
+        <br><section class="bg-light" id="fale-conosco">
              <div class="container">
                 <div class="text-center">
                     <h1

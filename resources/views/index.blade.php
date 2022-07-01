@@ -4,7 +4,6 @@
 
 @section('content')
 	<?php
-
 		if ($mensagem = Session::get('mensagem')) {
 			echo("
 					<br><div class='text-center' id='mensagem'>
@@ -123,22 +122,39 @@
                         </h1>
                     </div>
                 </div>
-                <div class="row p-3 border-white container">
-                        <div class="item">
+                <div class="row p-3 border-white">
+                    <!--<div class="owl-carousel owl-theme p-3">-->
+                        <div class="col-lg-4 col-md-4 col-sm-12 item">
                             <div class="card w-100">
-                                <img src="https://i.imgur.com/vA9buFK.jpg" class="card-img-top" alt="">
+                                <img class="img-fluid" src="https://i.imgur.com/vA9buFK.jpg" class="card-img-top" alt="">
                             </div>
                         </div>
-                        <div class="item">
+                        <div class="col-lg-4 col-md-4 col-sm-12 item">
                             <div class="card w-100">
                                 <img src="https://i.imgur.com/hh9WROI.jpg" class="card-img-top" alt="">
                             </div>
                         </div>
-                        <div class="item">
+                        <div class="col-lg-4 col-md-4 col-sm-12 item">
                             <div class="card w-100">
                                 <img src="https://i.imgur.com/fTFHzey.jpg" class="card-img-top" alt="">
                             </div>
                         </div>
+                        <!--<div class="item">
+                            <div class="card w-100">
+                                <img src="/assets/photo-4.jpeg" class="card-img-top" alt="">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="card w-100">
+                                <img src="/assets/photo-5.jpeg" class="card-img-top" alt="">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="card w-100">
+                                <img src="/assets/photo-6.jpeg" class="card-img-top" alt="">
+                            </div>
+                        </div>-->
+                    <!--</div>-->
                 </div>
             </div>
         </section>
@@ -208,10 +224,7 @@
 
     <!-- API Instagram -->
     <?php
-
-
 $curl = curl_init();
-
 curl_setopt_array($curl, [
     CURLOPT_URL => "https://instagram47.p.rapidapi.com/user_followers?userid=27313721371",
     CURLOPT_RETURNTRANSFER => true,
@@ -226,18 +239,14 @@ curl_setopt_array($curl, [
         "X-RapidAPI-Key: cb767b4dd0mshfb731d6d399c455p17cccejsn36462da1c1d9"
     ],
 ]);
-
 $response = curl_exec($curl);
 $err = curl_error($curl);
-
 curl_close($curl);
-
 if ($err) {
     echo "cURL Error #:" . $err;
 } else {
     $response = json_decode($response);
 }
-
     ?>
 
                         <div class="col">
@@ -316,9 +325,7 @@ if ($err) {
 		<script>
 			(function () {
 				"use strict";
-
 				var forms = document.querySelectorAll(".needs-validation");
-
 				Array.prototype.slice.call(forms).forEach(function (form) {
 					form.addEventListener(
 						"submit",
@@ -327,14 +334,12 @@ if ($err) {
 								event.preventDefault();
 								event.stopPropagation();
 							}
-
 							form.classList.add("was-validated");
 						},
 						false
 					);
 				});
 			})();
-
            $('.owl-carousel').owlCarousel({
                 loop:true,
                 margin:10,

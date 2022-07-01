@@ -35,13 +35,16 @@ class AdminController extends Controller
         }
         // teste - ok
         elseif ($request->input('gerenciar-admins') == 'remover-admin') {
+            echo('remover-admin');
             $email_input = $request->input('email-remocao');
             $usuario = Session::get('usuario');
 
             if ($email_input == $usuario) {
+                echo('admin logado');
                 Session::flash('mensagem', 'Você não pode remover o admin que está usando no momento.');
                 return redirect('/gerenciar-admins');    
             } else {
+                echo('admin existente');
                 $admins = Admin::all();
                 foreach ($admins as $admin) {
                     if (($admin->email==$email_input)) {

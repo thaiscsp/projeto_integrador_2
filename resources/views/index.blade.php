@@ -124,13 +124,12 @@
                         <h1
                             class="text-center mb-0 py-4 text-white display-4 border-bottom border-white"
                         >
-                            <strong>GALERIA</strong>
+                            <strong>GALERIA</strong><br>
                         </h1>
                     </div>
                 </div>
                 <div class="row border-white">
                     <!--<div class="owl-carousel owl-theme p-3">-->
-                    <br>
                         <div class="col-lg-4 col-md-4 col-sm-12 item">
                             <div class="card w-100">
                                 <img class="img-fluid" src="https://i.imgur.com/vA9buFK.jpg" class="card-img-top" alt="">

@@ -9,9 +9,9 @@
 ?>
 
 <div class='text-center'>
-	<h2 style='font-weight:  bold;'>Descadastro</h2>
+	<br><p class="display-5">DESCADASTRO</P>
 	<div class='form-group'>
-		<br><p>Tem certeza de que deseja se descadastrar?<br>Você não receberá mais e-mails.</p>
+		<br><p class="lead">Tem certeza de que deseja se descadastrar?<br>Você não receberá mais e-mails.</p>
 		<form id='logout' action='' method='POST'>
 			@csrf
 			<input type='submit' value='Descadastrar'>

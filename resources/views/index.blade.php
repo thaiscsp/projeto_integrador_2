@@ -284,7 +284,7 @@ if ($err) {
                                     <a
                                         href="https://www.instagram.com/cervejariadela/?hl=en"
                                         class="btn btn-sm btn-outline-secondary d-block mb-2"
-                                        >Instagram | {{$response->body->count}} seguidores </a
+                                        >Instagram | { {$response->body->count} } seguidores </a
                                     >
                                 </li>
                                 <li>

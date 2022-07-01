@@ -13,7 +13,7 @@
     </p>
 
     <footer>
-        <a href="http://localhost:8000/descadastrar/{{$email}}">Descadastrar</a>
+        <a href="http://cervejariadela.herokuapp.com/descadastrar/{{$email}}">Descadastrar</a>
     </footer>
 
 </body>

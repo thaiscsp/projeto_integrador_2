@@ -349,31 +349,31 @@
     <script>
     $(document).ready(function(){
         $(".nav-item.cervejas").mouseover(function(){
-            $(".nav-item.cervejas a").css('color', 'blue');
+            $(".nav-item.cervejas a").css({"color": "blue", "font-weight": "bold"});
         });
         $(".nav-item.cervejas").mouseout(function(){
-            $(".nav-item.cervejas a").css('color', 'black');
+            $(".nav-item.cervejas a").css({"color": "black", "font-weight": "normal"});
         });
         
         $(".nav-item.cervejaria").mouseover(function(){
-            $(".nav-item.cervejaria a").css('color', 'blue');
+            $(".nav-item.cervejaria a").css({"color": "blue", "font-weight": "bold"});
         });
         $(".nav-item.cervejaria").mouseout(function(){
-            $(".nav-item.cervejaria a").css('color', 'black');
+            $(".nav-item.cervejaria a").css({"color": "black", "font-weight": "normal"});
         });
         
         $(".nav-item.galeria").mouseover(function(){
-            $(".nav-item.galeria a").css('color', 'blue');
+            $(".nav-item.galeria a").css({"color": "blue", "font-weight": "bold"});
         });
         $(".nav-item.galeria").mouseout(function(){
-            $(".nav-item.galeria a").css('color', 'black');
+            $(".nav-item.galeria a").css({"color": "black", "font-weight": "normal"});
         });
         
         $(".nav-item.fale-conosco").mouseover(function(){
-            $(".nav-item.fale-conosco a").css('color', 'blue');
+            $(".nav-item.fale-conosco a").css({"color": "blue", "font-weight": "bold"});
         });
         $(".nav-item.fale-conosco").mouseout(function(){
-            $(".nav-item.fale-conosco a").css('color', 'black');
+            $(".nav-item.fale-conosco a").css({"color": "black", "font-weight": "normal"});
         }); 
     });
 </script>

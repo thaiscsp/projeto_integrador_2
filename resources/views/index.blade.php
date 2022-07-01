@@ -3,14 +3,6 @@
 @section('title', 'Cervejaria Dela')
 
 @section('content')
-<!--<div class='text-center'>
-	<div class='row'>
-		<div class='col-4'></div>
-		<div class='col-4'>
-			<h2 style='font-weight: bold; color: #afa3f5'>Cadastro - Newsletter</h2>
-		</div>
-		<div class='col-4'></div>
-	</div>-->
 	<?php
 
 		if ($mensagem = Session::get('mensagem')) {
@@ -284,7 +276,7 @@ if ($err) {
                                     <a
                                         href="https://www.instagram.com/cervejariadela/?hl=en"
                                         class="btn btn-sm btn-outline-secondary d-block mb-2"
-                                        >Instagram | { {$response->body->count} } seguidores </a
+                                        >Instagram | <!--{ {$response->body->count} }--> seguidores </a
                                     >
                                 </li>
                                 <li>

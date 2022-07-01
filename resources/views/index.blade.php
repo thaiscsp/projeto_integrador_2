@@ -41,7 +41,7 @@
                             </p>
                         </div>
                         <div class="col-md-4 mx-auto">
-                            <img class="img-fluid rounded" alt="Garrafa de chopp com rótulo 'LAGER' ao lado de um copo com o logo 'Cervejaria Dela'." src="https://i.imgur.com/vA9buFK.jpg"/>
+                            <img class="img-fluid rounded" src="https://i.imgur.com/vA9buFK.jpg" alt="" />
                         </div>
                     </div>
                 </div>
@@ -52,7 +52,7 @@
                 <div class="container p-4 p-md-5">
                     <div class="row text-black text-center mx-auto">
                         <div class="col-md-4 order-img">
-                            <img class="img-fluid rounded" src="https://i.imgur.com/hh9WROI.jpg" alt="Garrafa de chopp com rótulo 'IPA' ao lado de um copo com o logo 'Cervejaria Dela'." />
+                            <img class="img-fluid rounded" src="https://i.imgur.com/hh9WROI.jpg" alt="" />
                         </div>
                         <div class="col-md-8 order-text">
                             <p class="display-5">IPA</p>
@@ -82,7 +82,7 @@
                             </p>
                         </div>
                         <div class="col-md-4">
-                            <img class="img-fluid rounded" src="https://i.imgur.com/fTFHzey.jpg" alt="Garrafa de chopp com rótulo 'WEISS' ao lado de um copo com o logo 'Cervejaria Dela'." />
+                            <img class="img-fluid rounded" src="https://i.imgur.com/fTFHzey.jpg" alt="" />
                         </div>
                     </div>
                 </div>
@@ -124,19 +124,19 @@
                 </div>
                 <div class="row p-3 border-white">
                     <!--<div class="owl-carousel owl-theme p-3">-->
-                        <div class="col-lg-4 col-md-4 col-sm-12 item">
+                        <div class="col-lg-4 col-md-4 col-sm-4 xs-12 item">
                             <div class="card w-100">
-                                <img class="img-fluid" src="https://i.imgur.com/vA9buFK.jpg" class="card-img-top" alt="Garrafa de chopp com rótulo 'LAGER' ao lado de um copo com o logo 'Cervejaria Dela'.">
+                                <img class="img-fluid" src="https://i.imgur.com/vA9buFK.jpg" class="card-img-top" alt="">
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-4 col-sm-12 item">
+                        <div class="col-lg-4 col-md-4 col-sm-4 item">
                             <div class="card w-100">
-                                <img src="https://i.imgur.com/hh9WROI.jpg" class="card-img-top" alt="Garrafa de chopp com rótulo 'IPA' ao lado de um copo com o logo 'Cervejaria Dela'.">
+                                <img src="https://i.imgur.com/hh9WROI.jpg" class="card-img-top" alt="">
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-4 col-sm-12 item">
+                        <div class="col-lg-4 col-md-4 col-sm-4 item">
                             <div class="card w-100">
-                                <img src="https://i.imgur.com/fTFHzey.jpg" class="card-img-top" alt="Garrafa de chopp com rótulo 'WEISS' ao lado de um copo com o logo 'Cervejaria Dela'.">
+                                <img src="https://i.imgur.com/fTFHzey.jpg" class="card-img-top" alt="">
                             </div>
                         </div>
                         <!--<div class="item">

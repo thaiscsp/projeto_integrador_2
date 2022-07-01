@@ -356,7 +356,9 @@ if ($err) {
                     }
                 }
             })
-
+        $opt["responsive"] = true;
+        ...
+        $g->set_options($opt);
 		</script>
 
 

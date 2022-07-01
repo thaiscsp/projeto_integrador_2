@@ -62,7 +62,7 @@
                 <div class="container p-4 p-md-5">
                     <div class="row text-black text-center mx-auto">
                         <div class="col-md-4 order-img">
-                            <img class="img-fluid rounded" src="{{asset('storage/photo-5.jpeg')}}" alt="" />
+                            <img class="img-fluid rounded" src="https://i.imgur.com/hh9WROI.jpg" alt="" />
                         </div>
                         <div class="col-md-8 order-text">
                             <p class="display-5">IPA</p>

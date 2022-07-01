@@ -163,7 +163,6 @@
                     <!--</div>-->
                 </div>
             </div>
-            <br>
         </section>
 
 		<!-- Fale conosco -->

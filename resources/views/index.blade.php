@@ -36,10 +36,9 @@
                             <p class="display-5">LAGER</p>
                             <p class="display-6">A força única!</h3>
                             <p class="lead">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                Repellendus quos fugit quas asperiores cum error, neque sequi velit
-                                mollitia excepturi aliquam debitis rem vel autem possimus, dicta.
-                                Non, quasi, quod!
+                                CHOPP PURO MALTE, AMARGOR </br>
+								MODERADO, TEXTURA CRISP E </br>
+								ALTA DRINKABILITY.
                             </p>
                         </div>
                         <div class="col-md-4 mx-auto">
@@ -60,10 +59,10 @@
                             <p class="display-5">IPA</p>
                             <p class="display-6">A força marcante!</p>
                             <p class="lead">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                Repellendus quos fugit quas asperiores cum error, neque sequi
-                                velit mollitia excepturi aliquam debitis rem vel autem possimus,
-                                dicta. Non, quasi, quod!
+                                CHOPP DE COR AMBAR, AMARGO </br>
+								E INTENSO NO SABOR DOS </br>
+								LUPULOS AMERICANOS </br>
+								COLUMBUS, MOSAIC E CITRA.
                             </p>
                         </div>
                     </div>
@@ -78,10 +77,9 @@
                             <p class="display-5">WEISS</p>
                             <p class="display-6">A força potente!</p>
                             <p class="lead">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                Repellendus quos fugit quas asperiores cum error, neque sequi velit
-                                mollitia excepturi aliquam debitis rem vel autem possimus, dicta.
-                                Non, quasi, quod!
+                                CHOPP DE TRIGO, CLARO, </br>
+								TURVO, COM NOTAS DE CRAVO E </br>
+								BANANA.
                             </p>
                         </div>
                         <div class="col-md-4">
@@ -101,10 +99,7 @@
                 <div class="row text-center mx-auto bg-light p-4">
                     <div class="col-md-6">
                         <p class="lead">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat
-                            quasi nobis odit quam mollitia sequi hic soluta accusamus
-                            perspiciatis, cum tenetur aperiam quisquam vitae tempora impedit
-                            earum inventore vel quod!
+                            A Dela começou com a Química Bianca Vitto com a ideia de trazer o protagonismo feminino no meio cervejeiro. Ideia que foi abraçada pela família e o sócio Engenheiro Mecânico Breno Franchi. Assim em 2021 nasceu a Dela Cervejaria, a primeira e legítima cervejaria de São José do Rio Pardo.
                         </p>
                     </div>
                     <div class="col-md-6">

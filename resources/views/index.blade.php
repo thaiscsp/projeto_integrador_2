@@ -356,6 +356,7 @@ if ($err) {
                     }
                 }
             })
+            $body{width:90%;margin: 0 auto;min-width:600px;max-width:2000px}
 		</script>
 
 

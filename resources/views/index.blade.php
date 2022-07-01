@@ -124,22 +124,15 @@
                     </div>
                 </div>
                 <div class="row p-3 border-white">
-                    <!--<div class="owl-carousel owl-theme p-3">-->
-                        <div class="col-lg-4 col-md-4 col-sm-12 item">
-                            <div class="card w-100">
+                            <div class="col-lg-4 col-md-4 col-sm-12 item card w-100">
                                 <img class="img-fluid" src="https://i.imgur.com/vA9buFK.jpg" class="card-img-top" alt="">
                             </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-12 item">
-                            <div class="card w-100">
+                            <div class="col-lg-4 col-md-4 col-sm-12 item card w-100">
                                 <img src="https://i.imgur.com/hh9WROI.jpg" class="card-img-top" alt="">
                             </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-12 item">
-                            <div class="card w-100">
+                            <div class="col-lg-4 col-md-4 col-sm-12 item card w-100">
                                 <img src="https://i.imgur.com/fTFHzey.jpg" class="card-img-top" alt="">
                             </div>
-                        </div>
                         <!--<div class="item">
                             <div class="card w-100">
                                 <img src="/assets/photo-4.jpeg" class="card-img-top" alt="">
@@ -155,7 +148,6 @@
                                 <img src="/assets/photo-6.jpeg" class="card-img-top" alt="">
                             </div>
                         </div>-->
-                    <!--</div>-->
                 </div>
             </div>
         </section>

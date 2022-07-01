@@ -207,9 +207,9 @@
 		echo ("	<li class='nav-item'>
         			<a style='font-weight: bold;' class='text-black nav-link' href='/enviar'>Enviar e-mails</a>
       			</li>
-      			<li class='nav-item'>
+      			<!--<li class='nav-item'>
         			<a style='font-weight: bold;' class='text-black nav-link' href='/gerenciar-admins'>Gerenciar admins</a>
-      			</li>
+      			</li>-->
       			<li class='nav-item'>
         			<a style='font-weight: bold;' class='text-black nav-link' href='/logout'>Logout</a>
       			</li>

@@ -138,17 +138,17 @@
                 </div>
                 <div class="row border-white">
                     <div class="<!--owl-carousel owl-theme--> p-3">
-                        <div class="item">
+                        <div class="col-lg-4 col-md-4 col-sm-12 item">
                             <div class="card w-100">
                                 <img class="img-fluid" src="https://i.imgur.com/vA9buFK.jpg" class="card-img-top" alt="">
                             </div>
                         </div>
-                        <div class="item">
+                        <div class="col-lg-4 col-md-4 col-sm-12 item">
                             <div class="card w-100">
                                 <img src="https://i.imgur.com/hh9WROI.jpg" class="card-img-top" alt="">
                             </div>
                         </div>
-                        <div class="item">
+                        <div class="col-lg-4 col-md-4 col-sm-12 item">
                             <div class="card w-100">
                                 <img src="https://i.imgur.com/fTFHzey.jpg" class="card-img-top" alt="">
                             </div>

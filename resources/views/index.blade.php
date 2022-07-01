@@ -128,9 +128,8 @@
                         </h1>
                     </div>
                 </div>
-                <div class="row border-white">
+                <div class="row p-3 border-white">
                     <!--<div class="owl-carousel owl-theme p-3">-->
-                    <br><br>
                         <div class="col-lg-4 col-md-4 col-sm-12 item">
                             <div class="card w-100">
                                 <img class="img-fluid" src="https://i.imgur.com/vA9buFK.jpg" class="card-img-top" alt="">

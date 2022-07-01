@@ -169,8 +169,8 @@
 					<div class="collapse navbar-collapse" id="navbarNav">
 						<ul class="navbar-nav ms-auto">
 							<li class="nav-item">
-								<a class="fw-bold nav-link active" aria-current="page" href="/"
-									>Cervejaria Dela</a
+								<a class="fw-bold nav-link navbar-brand active" aria-current="page" href="/"
+									><img src="https://i.imgur.com/uvaHFiD.png"></a
 								>
 							<li class="nav-item">
 								<a class="nav-link active" aria-current="page" href="/#quem-somos"

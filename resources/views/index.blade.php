@@ -51,7 +51,7 @@
                             </p>
                         </div>
                         <div class="col-md-4 mx-auto">
-                            <img class="img-fluid rounded" src="photo-4.jpeg" alt="" />
+                            <img class="img-fluid rounded" src="https://drive.google.com/file/d/1BIHjFn2eCJwZSEDbkjQjb9FSsoKuzI6o/view?usp=sharing" alt="" />
                         </div>
                     </div>
                 </div>

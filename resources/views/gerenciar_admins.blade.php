@@ -51,7 +51,7 @@
 			<label for='email-remocao'><span style='color: red;'>*</span> E-mail:</label>
 			<input type='email-remocao' id='email' name='email' required>
 			<br><br>
-			<input type='submit' value='Remover'>
+			<input type='submit' name='Remover' value='Remover'>
 			<br>
 		</form>
 	</div><br><br>

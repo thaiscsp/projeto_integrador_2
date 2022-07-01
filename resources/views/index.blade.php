@@ -51,7 +51,7 @@
                             </p>
                         </div>
                         <div class="col-md-4 mx-auto">
-                            <img class="img-fluid rounded" src="{{asset('storage/photo-4.jpeg')}}" alt="" />
+                            <img class="img-fluid rounded" src="{{asset('image/photo-4.jpeg')}}" alt="" />
                         </div>
                     </div>
                 </div>

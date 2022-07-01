@@ -51,6 +51,3 @@ Route::get('/gerenciar-admins', function() {
     return view('gerenciar_admins');
 });
 Route::post('/gerenciar-admins', [AdminController::class, 'gerenciar_admins']);
-
-// rota temporária: insere admin teste para primeiro acesso ao site
-Route::get('/admin-teste', [AdminController::class, 'admin_teste']);

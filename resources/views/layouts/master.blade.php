@@ -152,7 +152,7 @@
 		<header class="header">
 			<nav class="navbar navbar-expand-lg bg-light navbar-light">
 				<div class="container container-fluid navbar-brand">
-					<a href="#">
+					<a href="/">
                         <img class="thumbnail" style="height: 40px" src="https://i.imgur.com/uvaHFiD.png" alt="">
                     </a>
 					<button
@@ -168,10 +168,6 @@
 					</button>
 					<div class="collapse navbar-collapse" id="navbarNav">
 						<ul class="navbar-nav ms-auto">
-							<li class="nav-item">
-								<a class="fw-bold nav-link navbar-brand active" aria-current="page" href="/"
-									><img src="https://i.imgur.com/uvaHFiD.png"></a
-								>
 							<li class="nav-item">
 								<a class="nav-link active" aria-current="page" href="/#quem-somos"
 									>Quem Somos</a

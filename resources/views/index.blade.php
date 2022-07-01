@@ -3,7 +3,6 @@
 @section('title', 'Cervejaria Dela')
 
 @section('content')
-body{width:90%;margin: 0 auto;min-width:600px;max-width:2000px}
 	<?php
 		if ($mensagem = Session::get('mensagem')) {
 			echo("

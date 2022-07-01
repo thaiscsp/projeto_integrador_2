@@ -173,12 +173,12 @@
 									>Quem Somos</a
 								>
 							</li>-->
-							<li class="nav-item">
+							<li class="cervejas nav-item">
 								<a class="nav-link active" aria-current="page" href="/#cervejas"
 									>Cervejas</a
 								>
 							</li>
-							<li class="nav-item">
+							<li class="cervejaria nav-item">
 								<a
 									class="nav-link active"
 									aria-current="page"
@@ -186,12 +186,12 @@
 									>Cervejaria</a
 								>
 							</li>
-							<li class="nav-item">
+							<li class="galeria nav-item">
 								<a class="nav-link active" aria-current="page" href="/#galeria"
 									>Galeria</a
 								>
 							</li>
-							<li class="nav-item">
+							<li class="fale-conosco nav-item">
 								<a class="nav-link active" aria-current="page" href="/#fale-conosco"
 									>Fale Conosco</a
 								>
@@ -348,11 +348,17 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     <script>
     $(document).ready(function(){
-        $(".nav-item").mouseover(function(){
-            $(".nav-item a").css('color', 'blue');
+        $(".nav-item.cervejas").mouseover(function(){
+            $(".nav-item.cervejas a").css('color', 'blue');
         });
-        $(".nav-item").mouseout(function(){
-            $(".nav-item a").css('color', 'black');
+        $(".nav-item.cervejaria").mouseout(function(){
+            $(".nav-item.cervejaria a").css('color', 'black');
+        });
+        $(".nav-item.galeria").mouseover(function(){
+            $(".nav-item.galeria a").css('color', 'blue');
+        });
+        $(".nav-item.fale-conosco").mouseout(function(){
+            $(".nav-item.fale-conosco a").css('color', 'black');
         });
     });
 </script>

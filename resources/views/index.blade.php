@@ -51,8 +51,7 @@
                             </p>
                         </div>
                         <div class="col-md-4 mx-auto">
-                            <blockquote class="imgur-embed-pub" lang="en" data-id="vA9buFK"><a href="https://imgur.com/vA9buFK">View post on imgur.com</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
-                            <img class="img-fluid rounded" src="https://imgur.com/vA9buFK" alt="" />
+                            <img class="img-fluid rounded" src="https://i.imgur.com/vA9buFK.jpg" alt="" />
                         </div>
                     </div>
                 </div>

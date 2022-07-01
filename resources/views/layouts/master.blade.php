@@ -349,10 +349,10 @@
     <script>
     $(document).ready(function(){
         $(".nav-item").mouseover(function(){
-            $("p").css('color', 'blue');
+            $(".nav-item").css('color', 'blue');
         });
         $(".nav-item").mouseout(function(){
-            $("p").css('color', 'black');
+            $(".nav-item").css('color', 'black');
         });
     });
 </script>

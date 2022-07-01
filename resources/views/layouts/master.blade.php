@@ -151,9 +151,9 @@
 	<!-- Navbar -->
 		<header class="header">
 			<nav class="navbar navbar-expand-lg bg-light navbar-light">
-				<div class="container container-fluid">
-					<a class="navbar-brand" href="#">
-                        <img style="height: 40px" src="/assets/logo.png" alt="">
+				<div class="container container-fluid navbar-brand">
+					<a href="#">
+                        <img class="thumbnail" style="height: 40px" src="/assets/logo.png" alt="">
                     </a>
 					<button
 						class="navbar-toggler"

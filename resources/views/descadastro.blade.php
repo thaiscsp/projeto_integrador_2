@@ -14,7 +14,7 @@
 		<br><p class="lead">Tem certeza de que deseja se descadastrar?<br>Você não receberá mais e-mails.</p>
 		<form id='logout' action='' method='POST'>
 			@csrf
-			<input type='submit' value='Descadastrar'>
+			<br><input type='submit' value='Descadastrar'>
 			<br>
 		</form>
 	</div>

@@ -224,7 +224,7 @@
 
     <!-- API Instagram -->
     <?php
-$curl = curl_init();
+/*$curl = curl_init();
 curl_setopt_array($curl, [
     CURLOPT_URL => "https://instagram47.p.rapidapi.com/user_followers?userid=27313721371",
     CURLOPT_RETURNTRANSFER => true,
@@ -246,7 +246,7 @@ if ($err) {
     echo "cURL Error #:" . $err;
 } else {
     $response = json_decode($response);
-}
+}*/
     ?>
 
                         <div class="col">
@@ -263,7 +263,7 @@ if ($err) {
                                     <a
                                         href="https://www.instagram.com/cervejariadela/?hl=en"
                                         class="btn btn-sm btn-outline-secondary d-block mb-2"
-                                        >Instagram | <!--{ {$response->body->count} }--> seguidores </a
+                                        >Instagram<!-- | { {$response->body->count} } seguidores --></a
                                     >
                                 </li>
                                 <li>

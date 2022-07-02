@@ -4,7 +4,6 @@
 
 @section('content')
 	<?php
-    Header('Variar: User-Agent'); 
 		if ($mensagem = Session::get('mensagem')) {
 			echo("
 					<br><div class='text-center' id='mensagem'>

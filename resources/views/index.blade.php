@@ -1,22 +1,18 @@
-use Jenssegers\Agent\Agent;
+<?php
+$iphone = strpos($_SERVER['HTTP_USER_AGENT'],"iPhone");
+$ipad = strpos($_SERVER['HTTP_USER_AGENT'],"iPad");
+$android = strpos($_SERVER['HTTP_USER_AGENT'],"Android");
+$palmpre = strpos($_SERVER['HTTP_USER_AGENT'],"webOS");
+$berry = strpos($_SERVER['HTTP_USER_AGENT'],"BlackBerry");
+$ipod = strpos($_SERVER['HTTP_USER_AGENT'],"iPod");
+$symbian =  strpos($_SERVER['HTTP_USER_AGENT'],"Symbian");
 
-$agent = new Agent();
-
-$agent->setUserAgent('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/537.13+ (KHTML, like Gecko) Version/5.1.7 Safari/534.57.2');
-$agent->setHttpHeaders($headers);
-
-$agent->is('Windows');
-$agent->is('Firefox');
-$agent->is('iPhone');
-$agent->is('OS X');
-
-$agent->isAndroidOS();
-$agent->isNexus();
-$agent->isSafari();
-
-$agent->isMobile();
-$agent->isTablet();
-
+if ($iphone || $ipad || $android || $palmpre || $ipod || $berry || $symbian == true) {
+    echo "Olá, eu sou mobile";
+} else {
+    echo "Olá, eu sou um computador";
+}
+?>
 @extends ('layouts.master')
 
 @section('title', 'Cervejaria Dela')

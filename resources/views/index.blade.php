@@ -1,4 +1,4 @@
-@extends('laravel-responsive-gallery::layout')
+
 
 @extends ('layouts.master')
 

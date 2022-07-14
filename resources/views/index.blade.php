@@ -1,34 +1,3 @@
-@media (max-width: 1024px) {
-.c1025 {
- display: none;
-}
-@media (min-width: 1025px) {
-.u1025 {
- display: none;
-}
-}
-@media (max-width: 499px) {
-.c499 {
- display: none;
-}
-}
-@media (max-width: 799px) {
-.c799 {
- display: none;
-}
-}
-@media (max-width: 640px) {
-.c640 {
- display: none;
-}
-}
-@media (max-width: 360px) {
-.c360 {
- display: none;
-}
-}
-
-
 @extends ('layouts.master')
 
 @section('title', 'Cervejaria Dela')

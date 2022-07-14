@@ -29,7 +29,7 @@
 			</div>
             <!-- LAGER -->
 			<section class="bg-dark">
-                <div class="container p-4 p-md-5">
+                <div class="container p-4 p-md-5 col-sm-12 item">
                     <div class="row text-center mx-auto">
                         <div class="col-md-8 text-white">
                             <p class="display-5">LAGER</p>
@@ -49,7 +49,7 @@
 
             <!-- IPA -->
 			<section class="bg-light">
-                <div class="container p-4 p-md-5">
+                <div class="container p-4 p-md-5 col-sm-12 item">
                     <div class="row text-black text-center mx-auto">
                         <div class="col-md-4 order-img">
                             <img class="img-fluid rounded" src="https://i.imgur.com/hh9WROI.jpg" alt="" />

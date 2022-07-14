@@ -1,3 +1,5 @@
+echo $_SERVER['HTTP_USER_AGENT']
+
 @extends ('layouts.master')
 
 @section('title', 'Cervejaria Dela')

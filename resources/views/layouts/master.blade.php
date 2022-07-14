@@ -84,7 +84,7 @@
 			}
 
 			/*Galeria*/
-			@media screen and (min-width: 568px) {
+			@media screen and (min-width: 720px) {
 				.cards-wrapper {
 					display: flex;
 				}

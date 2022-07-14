@@ -357,9 +357,8 @@ if ($err) {
                 }
             })
         
-		</script>
-
-<?php
+        
+        <?php
 $mobile = FALSE;
 
 $user_agents = array("iPhone","iPad","Android","webOS","BlackBerry","iPod","Symbian","IsGeneric");
@@ -384,6 +383,9 @@ if ($mobile){
     echo "Acesso feito via computador";
 }
 ?>
+
+		</script>
+
 
 
 

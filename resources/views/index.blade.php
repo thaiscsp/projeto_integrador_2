@@ -1,5 +1,9 @@
 @extends ('layouts.master')
 
+use Jenssegers\Agent\Agent;
+
+$agent = new Agent();
+
 @section('title', 'Cervejaria Dela')
 
 @section('content')

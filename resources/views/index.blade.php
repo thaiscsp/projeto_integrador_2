@@ -206,7 +206,7 @@
                         </div>
 					</form>
 				</div>
-                <div class="col-lg-6 p-4">
+                <div class="col-lg-6 p-4 col-sm-12">
                     <h2 class="h6 text-center">
                         NOSSO ENDEREÇO
                     </h2>

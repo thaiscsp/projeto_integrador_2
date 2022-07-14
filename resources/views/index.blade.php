@@ -1,3 +1,29 @@
+<?php
+$mobile = FALSE;
+
+$user_agents = array("iPhone","iPad","Android","webOS","BlackBerry","iPod","Symbian","IsGeneric");
+
+foreach($user_agents as $user_agent){
+
+    if (strpos($_SERVER['HTTP_USER_AGENT'], $user_agent) !== FALSE) {
+        $mobile = TRUE;
+
+        $modelo = $user_agent;
+
+        break;
+    }
+}
+
+if ($mobile){
+
+    echo "Acesso feito via ".strtolower($modelo);
+
+}else{
+
+    echo "Acesso feito via computador";
+}
+?>
+
 @extends ('layouts.master')
 
 @section('title', 'Cervejaria Dela')
@@ -356,22 +382,7 @@ if ($err) {
                     }
                 }
             })
-            
-            <?php
-$iphone = strpos($_SERVER['HTTP_USER_AGENT'],"iPhone");
-$ipad = strpos($_SERVER['HTTP_USER_AGENT'],"iPad");
-$android = strpos($_SERVER['HTTP_USER_AGENT'],"Android");
-$palmpre = strpos($_SERVER['HTTP_USER_AGENT'],"webOS");
-$berry = strpos($_SERVER['HTTP_USER_AGENT'],"BlackBerry");
-$ipod = strpos($_SERVER['HTTP_USER_AGENT'],"iPod");
-$symbian =  strpos($_SERVER['HTTP_USER_AGENT'],"Symbian");
-
-if ($iphone || $ipad || $android || $palmpre || $ipod || $berry || $symbian == true) {
-    echo "Olá, eu sou mobile";
-} else {
-    echo "Olá, eu sou um computador";
-}
-?>
+        
 		</script>
 
 

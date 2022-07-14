@@ -59,7 +59,7 @@
 			}
 
 			/*Nossas cervejas*/
-			@media screen and (max-width: 320px) {
+			@media screen and (max-width: 567px) {
 				.order-text {
 					order: 1;
 				}
@@ -70,7 +70,7 @@
 
 			/* Conheça nossa cervejaria */
 
-			@media screen and (max-width: 320px) {
+			@media screen and (max-width: 567px) {
 				.container {
 					text-align: center;
 				}
@@ -84,7 +84,7 @@
 			}
 
 			/*Galeria*/
-			@media screen and (min-width: 320px) {
+			@media screen and (min-width: 567px) {
 				.cards-wrapper {
 					display: flex;
 				}
@@ -97,7 +97,7 @@
 				}
 			}
 
-			@media screen and (max-width: 320px) {
+			@media screen and (max-width: 567px) {
 				.card:not(:first-child) {
 					display: none;
 				}

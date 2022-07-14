@@ -40,7 +40,7 @@
 								ALTA DRINKABILITY.
                             </p>
                         </div>
-                        <div class="col-md-4 col-sm-12 mx-auto">
+                        <div class="col-md-12 mx-auto">
                             <img class="img-fluid rounded" src="https://i.imgur.com/vA9buFK.jpg" alt="" />
                         </div>
                     </div>

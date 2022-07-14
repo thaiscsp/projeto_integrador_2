@@ -1,4 +1,3 @@
-
 use Jenssegers\Agent\Agent;
 
 $agent = new Agent();
